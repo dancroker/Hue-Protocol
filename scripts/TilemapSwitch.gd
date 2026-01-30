@@ -11,6 +11,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#var direction := Input.is_action_pressed("Switch Mask")
+	pass
+	
+func SwitchTile():
 	if Input.is_action_pressed("Switch Mask"):
 		if ground.visible == false:
 			ground.visible = true
