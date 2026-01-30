@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://cetg87jbkr1ox"]
+[gd_scene format=4 uid="uid://b4c7t42cuhyh5"]
 
-[ext_resource type="Script" uid="uid://bhkj3j8r37bjn" path="res://scripts/TilemapSwitch.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://dgx2vjvoq307j" path="res://2d art/WhiteTile.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://bhkj3j8r37bjn" path="res://scripts/TilemapSwitch.gd" id="1_8h3q8"]
+[ext_resource type="Texture2D" uid="uid://dgx2vjvoq307j" path="res://2d art/WhiteTile.png" id="2_tps73"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e48y"]
-texture = ExtResource("1_wtcfe")
+texture = ExtResource("2_tps73")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -13,7 +13,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0e48y")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epypp"]
-texture = ExtResource("1_wtcfe")
+texture = ExtResource("2_tps73")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
@@ -21,15 +21,20 @@ texture = ExtResource("1_wtcfe")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_epypp")
 
-[node name="Node2D" type="Node2D" unique_id=460489873]
-script = ExtResource("1_0e48y")
+[node name="TileMpaSwitchNode" type="Node2D" unique_id=460489873]
+script = ExtResource("1_8h3q8")
 
 [node name="Node" type="Node" parent="." unique_id=1415404452]
+
+[node name="Layer0" type="TileMapLayer" parent="Node" unique_id=436278653]
+visible = false
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAANAAAAAAAAAAAAAAANAAEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_epypp")
 
 [node name="Ground" type="TileMap" parent="Node" unique_id=1493426977]
 tile_set = SubResource("TileSet_epypp")
 format = 2
-layer_0/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 131071, 0, 0, 65536, 0, 0, 4, 0, 0, 65540, 0, 0, 5, 0, 0, 65541, 0, 0, 10, 0, 0, 9, 0, 0, 65545, 0, 0, 65546, 0, 0, 15, 0, 0, 14, 0, 0, 65550, 0, 0, 65551, 0, 0, 65534, 0, 0, 65533, 0, 0, 131069, 0, 0, 131070, 0, 0, 8, 0, 0, 65544, 0, 0, 13, 0, 0, 65549, 0, 0)
 
 [node name="Ground Blue" type="TileMap" parent="Node" unique_id=422039455]
 tile_set = SubResource("TileSet_0hol4")
