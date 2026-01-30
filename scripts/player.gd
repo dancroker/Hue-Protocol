@@ -17,11 +17,11 @@ func _physics_process(delta: float) -> void:
 		MAX_NUM_JUMP -=1
 		
 		velocity.y = JUMP_VELOCITY
-		print(MAX_NUM_JUMP)
+		
 	if is_on_wall() and Input.is_action_just_pressed("ui_accept") and MAX_NUM_JUMP > 0:
 		MAX_NUM_JUMP -= 1
 		velocity.y = JUMP_VELOCITY
-		print(MAX_NUM_JUMP)
+	
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

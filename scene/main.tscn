@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://csm8n76jaarnb"]
 
 [ext_resource type="PackedScene" uid="uid://b4c7t42cuhyh5" path="res://TileMapSwitch.tscn" id="1_itxqv"]
+[ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
 
 [node name="Main" type="Node2D" unique_id=323402972]
 
 [node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("1_itxqv")]
+position = Vector2(86, 29)
+
+[node name="CharacterBody2D" parent="." unique_id=1361325641 instance=ExtResource("2_v0l8b")]
+position = Vector2(86, 29)
+scale = Vector2(0.325, 0.325)

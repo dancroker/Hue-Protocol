@@ -1,7 +1,7 @@
 extends Node2D
 
 #@onready var ground: TileMap = $Node/Ground
-@onready var ground_blue: TileMap = $"Node/Ground Blue"
+@onready var ground_blue: TileMapLayer = $"Node/Ground Blue"
 @onready var ground: TileMapLayer = $Node/Layer0
 
 # C$Node/Layer0alled when the node enters the scene tree for the first time.

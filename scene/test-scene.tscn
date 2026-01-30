@@ -1,26 +1,15 @@
 [gd_scene format=3 uid="uid://dt7movvk5p6n4"]
 
-[ext_resource type="Script" uid="uid://pmloiujqkva3" path="res://scripts/player.gd" id="1_effx3"]
+[ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="1_effx3"]
 [ext_resource type="Texture2D" uid="uid://dptmguaskm752" path="res://icon.svg" id="2_vcfve"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5pbs"]
-size = Vector2(113, 118)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cp2na"]
 size = Vector2(111, 119)
 
 [node name="Node2D" type="Node2D" unique_id=1120370521]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=462301835]
+[node name="CharacterBody2D" parent="." unique_id=1361325641 instance=ExtResource("1_effx3")]
 position = Vector2(307, 187)
-script = ExtResource("1_effx3")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1401831117]
-texture = ExtResource("2_vcfve")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1907156743]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_c5pbs")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1093724289]
 position = Vector2(436, 314)
