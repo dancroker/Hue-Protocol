@@ -18,7 +18,7 @@ FetchContent_MakeAvailable(SFML)    # Makes sure SFML and its dependencies are a
 #---- File management & .exe creation ----#
 
 set(SOURCE_FILES src/main.cpp src/Game.cpp src/Game.h)  # Sets variable SOURCE_FILES to hold names & locations of files that need to be compiled into the application
-add_executable(WhackamoleSFML ${SOURCE_FILES}  )  # Names the application and tells compiler which source files to use
+add_executable(WhackamoleSFML ${SOURCE_FILES}   "src/MapGrid.h" "src/MapGrid.cpp")  # Names the application and tells compiler which source files to use
 
 target_link_libraries(WhackamoleSFML PRIVATE sfml-graphics sfml-window sfml-system sfml-network sfml-audio) # Links the SFML libraries we need to our application
 target_compile_features(WhackamoleSFML PRIVATE cxx_std_20)  # Defines which standard of C++ the compiler should use

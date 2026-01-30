@@ -12,6 +12,11 @@ Game::~Game() {}
 
 bool Game::init()
 {
+  mapGridOne.createMaze(1);
+  mapGridOne.printGrid();
+  std::cout << "-----------------" << std::endl;
+  mapGridTwo.createMaze(2);
+  mapGridTwo.printGrid();
   return true;
 }
 
