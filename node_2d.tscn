@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cetg87jbkr1ox"]
+
+[sub_resource type="TileSet" id="TileSet_y32ns"]
+
+[node name="Node2D" type="Node2D" unique_id=460489873]
+
+[node name="Node" type="Node" parent="." unique_id=1415404452]
+
+[node name="Ground" type="TileMap" parent="Node" unique_id=1493426977]
+tile_set = SubResource("TileSet_y32ns")
+format = 2
