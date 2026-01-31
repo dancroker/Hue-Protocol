@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://csm8n76jaarnb"]
 
-[ext_resource type="Script" uid="uid://bghuinlyik5m" path="res://scripts/camera_2d.gd" id="1_brvut"]
+[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="1_brvut"]
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
-[ext_resource type="Script" uid="uid://cmw71gaexrg7j" path="res://scripts/crt_effect.gd" id="2_wp4xf"]
+[ext_resource type="Script" path="res://scripts/crt_effect.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://cdwfk60nx3fqi" path="res://scene/TileMapSwitch.tscn" id="3_brvut"]
 
 [sub_resource type="Shader" id="Shader_v0l8b"]
@@ -263,7 +263,7 @@ shader_parameter/vignette_opacity = 0.5
 [node name="Main" type="Node2D" unique_id=323402972]
 
 [node name="CharacterBody2D" parent="." unique_id=579170887 instance=ExtResource("2_v0l8b")]
-position = Vector2(26, 45)
+position = Vector2(35, 593)
 scale = Vector2(0.25, 0.25)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1000464645]
