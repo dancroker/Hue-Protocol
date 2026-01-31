@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 100.0
 const JUMP_VELOCITY = -600.0
 var MAX_NUM_JUMP = 1
 var jump_vairable = -100
@@ -54,6 +54,7 @@ func screen_wrap():
 		position.x = 0
 	elif position.x < 0:
 		position.x = screen_size.x
+
 
 
 	

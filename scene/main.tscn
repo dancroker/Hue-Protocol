@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://csm8n76jaarnb"]
 
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
-[ext_resource type="PackedScene" uid="uid://hj4mrnifv4ow" path="res://scene/TileMapSwitch.tscn" id="3_brvut"]
-[ext_resource type="PackedScene" path="res://scene/PlayerRigidBody.tscn" id="3_wp4xf"]
+[ext_resource type="PackedScene" path="res://scene/TileMapSwitch.tscn" id="3_brvut"]
 
 [node name="Main" type="Node2D" unique_id=323402972]
 
-[node name="CharacterBody2D" parent="." unique_id=1361325641 instance=ExtResource("2_v0l8b")]
-visible = false
-position = Vector2(81.00001, 19.000004)
-scale = Vector2(0.325, 0.325)
+[node name="CharacterBody2D" parent="." unique_id=579170887 instance=ExtResource("2_v0l8b")]
+position = Vector2(26, 45)
+scale = Vector2(0.25, 0.25)
 
-[node name="PlayerRb" parent="." unique_id=567937080 instance=ExtResource("3_wp4xf")]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1000464645]
 position = Vector2(137, 85)
+offset = Vector2(-65.34, 0)
+limit_left = 676
+limit_right = 576
 
 [node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("3_brvut")]
