@@ -34,13 +34,25 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		screen_wrap()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+
+
 
 	move_and_slide()
+@onready var screen_size = get_viewport_rect().size
 
 func get_mask():
 	return MASK_EQUIPT
+
+func screen_wrap():
+	if position.x > screen_size.x:
+		position.x = 0
+	elif position.x < 0:
+		position.x = screen_size.x
+
 	
 func set_mask(set_value):
 	MASK_EQUIPT = set_value
