@@ -6,6 +6,7 @@ extends Node2D
 
 # C$Node/Layer0alled when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	pass # Replace with function body.
 
 
@@ -16,7 +17,7 @@ func _process(delta: float) -> void:
 	
 func SwitchTile():
 	if Input.is_action_just_pressed("Switch Mask"):
-		
+		ground_blue.collision_enabled = !ground_blue.collision_enabled
 		ground.visible=!ground.visible
 		ground_blue.visible=!ground_blue.visible
 		

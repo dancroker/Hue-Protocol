@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://76skl4k3pnlm"]
+[gd_scene format=3 uid="uid://bldvynt1cklxv"]
 
 [ext_resource type="Script" uid="uid://pmloiujqkva3" path="res://scripts/player.gd" id="1_g0iv5"]
 [ext_resource type="Texture2D" uid="uid://dptmguaskm752" path="res://icon.svg" id="2_4j7jg"]
@@ -12,7 +12,7 @@ size = Vector2(123, 126.75)
 [node name="Node2D" type="Node2D" unique_id=1120370521]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=462301835]
-position = Vector2(431, 439)
+position = Vector2(124, 349)
 script = ExtResource("1_g0iv5")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1401831117]
@@ -23,7 +23,7 @@ position = Vector2(0.5, -2)
 shape = SubResource("RectangleShape2D_c5pbs")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1093724289]
-position = Vector2(432, 572)
+position = Vector2(125, 482)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=787716916]
 position = Vector2(-1.5, -1.75)
@@ -34,7 +34,7 @@ modulate = Color(0, 0, 18.892157, 1)
 texture = ExtResource("2_4j7jg")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=818763193]
-position = Vector2(555, 572)
+position = Vector2(248, 482)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=640198663]
 position = Vector2(-1.5, -1.75)
@@ -45,7 +45,7 @@ modulate = Color(0, 0, 18.892157, 1)
 texture = ExtResource("2_4j7jg")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=347617793]
-position = Vector2(678, 572)
+position = Vector2(371, 482)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=553324086]
 position = Vector2(-1.5, -1.75)
@@ -56,7 +56,7 @@ modulate = Color(0, 0, 18.892157, 1)
 texture = ExtResource("2_4j7jg")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=2132034227]
-position = Vector2(801, 572)
+position = Vector2(494, 482)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=510904782]
 position = Vector2(-1.5, -1.75)
@@ -67,7 +67,7 @@ modulate = Color(0, 0, 18.892157, 1)
 texture = ExtResource("2_4j7jg")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1823762801]
-position = Vector2(801, 445)
+position = Vector2(494, 355)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=423767377]
 position = Vector2(-1.5, -1.75)
@@ -78,7 +78,7 @@ modulate = Color(0, 0, 18.892157, 1)
 texture = ExtResource("2_4j7jg")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1436943714]
-position = Vector2(801, 319)
+position = Vector2(494, 229)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=1590653223]
 position = Vector2(-1.5, -1.75)
@@ -89,7 +89,7 @@ modulate = Color(0, 0, 18.892157, 1)
 texture = ExtResource("2_4j7jg")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=308916877]
-position = Vector2(801, 195)
+position = Vector2(494, 105)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1524609565]
 position = Vector2(-1.5, -1.75)
