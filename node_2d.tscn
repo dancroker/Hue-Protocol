@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bn1mcpk2m1kia"]
+
+[ext_resource type="Script" uid="uid://bhkj3j8r37bjn" path="res://scripts/TilemapSwitch.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://dgx2vjvoq307j" path="res://2d art/WhiteTile.png" id="1_wtcfe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e48y"]
+texture = ExtResource("1_wtcfe")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_epypp"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_0e48y")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epypp"]
+texture = ExtResource("1_wtcfe")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_0hol4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_epypp")
+
+[node name="Node2D" type="Node2D" unique_id=460489873]
+script = ExtResource("1_0e48y")
+
+[node name="Node" type="Node" parent="." unique_id=1415404452]
+
+[node name="Ground" type="TileMap" parent="Node" unique_id=1493426977]
+tile_set = SubResource("TileSet_epypp")
+format = 2
+layer_0/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 131071, 0, 0, 65536, 0, 0, 4, 0, 0, 65540, 0, 0, 5, 0, 0, 65541, 0, 0, 10, 0, 0, 9, 0, 0, 65545, 0, 0, 65546, 0, 0, 15, 0, 0, 14, 0, 0, 65550, 0, 0, 65551, 0, 0, 65534, 0, 0, 65533, 0, 0, 131069, 0, 0, 131070, 0, 0, 8, 0, 0, 65544, 0, 0, 13, 0, 0, 65549, 0, 0)
+
+[node name="Ground Blue" type="TileMap" parent="Node" unique_id=422039455]
+tile_set = SubResource("TileSet_0hol4")
+format = 2
+layer_0/tile_data = PackedInt32Array(327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 393213, 0, 0, 393214, 0, 0, 393215, 0, 0, 327680, 0, 0, 262148, 0, 0, 262149, 0, 0, 327685, 0, 0, 327684, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0)
