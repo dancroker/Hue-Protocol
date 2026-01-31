@@ -6,7 +6,7 @@ const MOVE_SPEED = 100.0
 const JUMP_FORCE = -600.0
 var MAX_NUM_JUMP = 1
 var jump_vairable = -100
-var MASK_EQUIPT = 0;
+
 
 
 func _physics_process(delta):
@@ -27,5 +27,5 @@ func _intergrate_forces(state):
 
 func _on_floor():
 	if ray_cast_2d.is_colliding():
-		print("is collidongt")
+		#print("is collidongt")
 		return true
