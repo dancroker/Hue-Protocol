@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 var MAX_NUM_JUMP = 2
+var MASK_EQUIPT = 0;
 
 
 func _physics_process(delta: float) -> void:
@@ -32,3 +33,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func get_mask():
+	return MASK_EQUIPT
+	
+func set_mask(set_value):
+	MASK_EQUIPT = set_value
+	# 0 = None
+	# 1 = Red
+	# 2 = Blue

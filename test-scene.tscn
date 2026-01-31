@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://76skl4k3pnlm"]
+
+[ext_resource type="Texture2D" uid="uid://dptmguaskm752" path="res://icon.svg" id="2_8amj3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5pbs"]
+size = Vector2(113, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp2na"]
+size = Vector2(111, 119)
+
+[node name="Node2D" type="Node2D" unique_id=1120370521]
+position = Vector2(339, 454)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=462301835]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1401831117]
+texture = ExtResource("2_8amj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1907156743]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_c5pbs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1093724289]
+position = Vector2(129, 127)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=787716916]
+shape = SubResource("RectangleShape2D_cp2na")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=160562180]
+modulate = Color(0, 0, 18.892157, 1)
+texture = ExtResource("2_8amj3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=751255064]
+position = Vector2(2, 126)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1829999447]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_cp2na")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1468560993]
+modulate = Color(0, 0, 18.892157, 1)
+texture = ExtResource("2_8amj3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1007319790]
+position = Vector2(246, 123)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=532659890]
+shape = SubResource("RectangleShape2D_cp2na")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=1211860977]
+modulate = Color(0, 0, 18.892157, 1)
+texture = ExtResource("2_8amj3")
