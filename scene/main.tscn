@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dm8q1fgg5kfmi" path="res://TileMapSwitch.tscn" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
-[ext_resource type="PackedScene" uid="uid://dowrq8k2u8mll" path="res://test.tscn" id="3_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://coldkmhdq8xvx" path="res://PlayerRigidBody.tscn" id="3_wp4xf"]
 
 [node name="Main" type="Node2D" unique_id=323402972]
 
@@ -15,4 +15,4 @@ position = Vector2(81.00001, 19.000004)
 scale = Vector2(0.325, 0.325)
 
 [node name="Test" parent="." unique_id=567937080 instance=ExtResource("3_wp4xf")]
-position = Vector2(138.99998, 91.99999)
+position = Vector2(137, 85)
