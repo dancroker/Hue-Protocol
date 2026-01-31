@@ -2,12 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://dm8q1fgg5kfmi" path="res://TileMapSwitch.tscn" id="1_itxqv"]
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
+[ext_resource type="Shader" uid="uid://xyu7np3lgiec" path="res://scene/two-tone.gdshader" id="3_wp4xf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_brvut"]
+shader = ExtResource("3_wp4xf")
 
 [node name="Main" type="Node2D" unique_id=323402972]
 
 [node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("1_itxqv")]
-position = Vector2(86, 29)
 
-[node name="CharacterBody2D" parent="." unique_id=1361325641 instance=ExtResource("2_v0l8b")]
-position = Vector2(81.00001, 19.000004)
+[node name="Player" parent="." unique_id=1361325641 instance=ExtResource("2_v0l8b")]
+position = Vector2(164, 457)
 scale = Vector2(0.325, 0.325)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=817289918]
+visible = false
+material = SubResource("ShaderMaterial_brvut")
+offset_left = -24.0
+offset_top = -7.0
+offset_right = 1193.0
+offset_bottom = 662.0
