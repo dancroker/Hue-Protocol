@@ -53,9 +53,11 @@ func screen_wrap():
 	elif position.x < 0:
 		position.x = screen_size.x
 
+
 	
 func set_mask(set_value):
 	MASK_EQUIPT = set_value
 	# 0 = None
 	# 1 = Red
 	# 2 = Blue
+	# 3 = Both
