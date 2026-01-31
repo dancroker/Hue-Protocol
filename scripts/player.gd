@@ -46,8 +46,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 @onready var screen_size = get_viewport_rect().size
 
-func get_mask():
-	return MASK_EQUIPT
 
 func screen_wrap():
 	if position.x > screen_size.x:
@@ -58,9 +56,3 @@ func screen_wrap():
 
 
 	
-func set_mask(set_value):
-	MASK_EQUIPT = set_value
-	# 0 = None
-	# 1 = Red
-	# 2 = Blue
-	# 3 = Both
