@@ -2,11 +2,12 @@ extends Node2D
 
 #@onready var ground: TileMap = $Node/Ground
 @onready var ground_blue: TileMapLayer = $"Ground Blue"
-@onready var ground: TileMapLayer = $"Layer0"
+@onready var ground: TileMapLayer = $"Ground Red"
 var MASK_EQUIPT = 0;
 # C$Node/Layer0alled when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	ground.visible=!ground.visible
+	ground.collision_enabled = !ground_blue.collision_enabled
 	pass # Replace with function body.
 
 
@@ -20,6 +21,7 @@ func SwitchTile():
 		set_mask(1)
 		print("mask red")
 		ground_blue.collision_enabled = !ground_blue.collision_enabled
+		ground.collision_enabled = !ground_blue.collision_enabled
 		ground.visible=!ground.visible
 		ground_blue.visible=!ground_blue.visible
 	if Input.is_action_just_pressed("Mask Blue"):

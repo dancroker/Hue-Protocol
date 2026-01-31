@@ -263,7 +263,7 @@ shader_parameter/vignette_opacity = 0.5
 [node name="Main" type="Node2D" unique_id=323402972]
 
 [node name="CharacterBody2D" parent="." unique_id=579170887 instance=ExtResource("2_v0l8b")]
-position = Vector2(35, 593)
+position = Vector2(140, 428)
 scale = Vector2(0.25, 0.25)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1000464645]
