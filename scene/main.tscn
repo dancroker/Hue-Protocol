@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bghuinlyik5m" path="res://scripts/camera_2d.gd" id="1_brvut"]
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Script" uid="uid://cmw71gaexrg7j" path="res://scripts/crt_effect.gd" id="2_wp4xf"]
-[ext_resource type="PackedScene" path="res://scene/TileMapSwitch.tscn" id="3_brvut"]
+[ext_resource type="PackedScene" uid="uid://cdwfk60nx3fqi" path="res://scene/TileMapSwitch.tscn" id="3_brvut"]
 
 [sub_resource type="Shader" id="Shader_v0l8b"]
 code = "/*
@@ -266,20 +266,19 @@ shader_parameter/vignette_opacity = 0.5
 position = Vector2(26, 45)
 scale = Vector2(0.25, 0.25)
 
-[node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("3_brvut")]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1000464645]
-position = Vector2(60.25, 66.25)
-scale = Vector2(0.25, 0.25)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1000464645]
+position = Vector2(137, 85)
 offset = Vector2(-65.34, 0)
 limit_left = 676
 limit_right = 576
 script = ExtResource("1_brvut")
 
-[node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=443587593]
+[node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("3_brvut")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=443587593]
 material = SubResource("ShaderMaterial_wp4xf")
-offset_left = -281.0
-offset_top = -1309.0
-offset_right = 4355.0
-offset_bottom = 1319.0
+offset_left = -68.0
+offset_top = -347.0
+offset_right = 1146.0
+offset_bottom = 392.0
 script = ExtResource("2_wp4xf")
