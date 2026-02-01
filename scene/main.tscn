@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://csm8n76jaarnb"]
 
+[ext_resource type="Script" uid="uid://cpdl11xmmf2tn" path="res://scripts/Precentage.gd" id="1_0ha60"]
 [ext_resource type="Script" uid="uid://bghuinlyik5m" path="res://scripts/camera_2d.gd" id="1_brvut"]
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Script" uid="uid://cmw71gaexrg7j" path="res://scripts/crt_effect.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://cdwfk60nx3fqi" path="res://scene/TileMapSwitch.tscn" id="3_brvut"]
+[ext_resource type="FontFile" uid="uid://0mr41am446jr" path="res://2d art/Jersey_10/Jersey10-Regular.ttf" id="6_4j5ol"]
 
 [sub_resource type="Shader" id="Shader_v0l8b"]
 code = "/*
@@ -260,10 +262,19 @@ shader_parameter/clip_warp = true
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
+[sub_resource type="LabelSettings" id="LabelSettings_0ha60"]
+font = ExtResource("6_4j5ol")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_4j5ol"]
+font = ExtResource("6_4j5ol")
+font_size = 50
+
 [node name="Main" type="Node2D" unique_id=323402972]
+script = ExtResource("1_0ha60")
 
 [node name="CharacterBody2D" parent="." unique_id=579170887 instance=ExtResource("2_v0l8b")]
-position = Vector2(140, 428)
+position = Vector2(944, -596)
 scale = Vector2(0.25, 0.25)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1000464645]
@@ -276,10 +287,25 @@ script = ExtResource("1_brvut")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2019587054]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=443587593]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=443587593 node_paths=PackedStringArray("label_2")]
 material = SubResource("ShaderMaterial_wp4xf")
 offset_left = -56.0
 offset_top = -71.0
 offset_right = 1158.0
 offset_bottom = 668.0
 script = ExtResource("2_wp4xf")
+label_2 = NodePath("../Label2")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=24137446]
+offset_left = 504.0
+offset_top = 12.0
+offset_right = 646.0
+offset_bottom = 81.0
+label_settings = SubResource("LabelSettings_0ha60")
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1682972287]
+offset_left = 955.0
+offset_top = 11.0
+offset_right = 1144.0
+offset_bottom = 34.0
+label_settings = SubResource("LabelSettings_4j5ol")

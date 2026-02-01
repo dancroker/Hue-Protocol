@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 175.0
 const JUMP_VELOCITY = -600.0
 var MAX_NUM_JUMP = 1
@@ -26,22 +25,22 @@ func _physics_process(delta: float) -> void:
 		jump_vairable = -200
 		#velocity.y = JUMP_VELOCITY
 		
-	if is_on_wall() and Input.is_action_just_pressed("ui_accept") and MAX_NUM_JUMP > 0:
-		MAX_NUM_JUMP -= 1
-		velocity.y = JUMP_VELOCITY
+	#if is_on_wall() and Input.is_action_just_pressed("ui_accept") and MAX_NUM_JUMP > 0:
+		#MAX_NUM_JUMP -= 1
+		#velocity.y = JUMP_VELOCITY
 	
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-
-
-	if direction:
-		velocity.x = direction * SPEED
-		screen_wrap()
+	if !Input.is_action_pressed("ui_accept"):
+		var direction := Input.get_axis("ui_left", "ui_right")
+		if direction:
+			velocity.x = direction * SPEED
+			screen_wrap()
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+		velocity.x = 0
 	player_completion_percentage()
 	
 
@@ -62,9 +61,11 @@ func player_completion_percentage():
 	if player_y < 0:
 		player_y = player_y*-1
 	player_completion = ((player_y/ (160*32)))*100
+	player_completion = floor(player_completion)
+	int(player_completion)
 	if player_completion > 100:
 		player_completion = 100
-	print(player_completion)
+	return str(player_completion)
 
 
 	
