@@ -5,6 +5,7 @@ extends Node2D
 @onready var ground: TileMapLayer = $"Ground Red"
 @onready var color_rect: ColorRect = $"../CanvasLayer/ColorRect"
 @onready var music: AudioStreamPlayer = $"../Music"
+@onready var mask_icon: Sprite2D = $"../CanvasLayer/MaskIcon"
 
 @onready var red: ColorRect = $"../CanvasLayer/Red"
 
@@ -27,7 +28,7 @@ func _process(delta: float) -> void:
 func SwitchTile():
 	if Input.is_action_just_pressed("Mask Red"):
 		s=!s
-		
+		mask_icon.frame = !s
 		AudioServer.set_bus_bypass_effects(0,s)
 		var tween: Tween = create_tween().set_ease(Tween.EASE_IN_OUT)
 		if s==true:

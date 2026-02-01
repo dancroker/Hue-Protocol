@@ -28,5 +28,8 @@ func _process(delta: float) -> void:
 	else:
 		pause +=1
 		label_2.text = str(time)
+	if Input.is_action_just_pressed("Restart"):
+		time = 0
+		pause = 0
 	pass
 	

@@ -10,9 +10,14 @@ var player_y = 0;
 var jump_calc = 0;
 var jump_precentage = 0
 var text
+@onready var progress_bar: ProgressBar = $ProgressBar
 
 @onready var label: Label = $Label
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var well_done: Sprite2D = $"../Well Done"
+@onready var animation_player: AnimationPlayer = $"../Well Done/AnimationPlayer"
+@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+
 
 @onready var jump_sfx: AudioStreamPlayer = $JumpSfx
 @onready var jump_charge_sfx: AudioStreamPlayer = $JumpChargeSfx
@@ -32,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_accept") and MAX_NUM_JUMP > 0:
 		if jump_vairable > -600:
 			jump_vairable -= 10
+			texture_progress_bar.value=jump_precentage
 			#_animated_sprite.play("charging")
 		
 		if not jump_charge_sfx_played:
@@ -43,6 +49,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_vairable
 		jump_vairable = -200
 		_animated_sprite.play("jump")
+		texture_progress_bar.value=0
 		#velocity.y = JUMP_VELOCITY
 		
 		jump_charge_sfx.stop()
@@ -57,12 +64,13 @@ func _physics_process(delta: float) -> void:
 
 		
 		
-		
-	
+	if position.y<=((160*32))*-1:
+		animation_player.play("well_done")
 		
 	if Input.is_action_just_pressed("Restart") and position.y <= ((160*32))*-1:
 		position.x = 34
 		position.y = 592
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if !Input.is_action_pressed("ui_accept"):
@@ -70,6 +78,7 @@ func _physics_process(delta: float) -> void:
 		if direction > 0: direction = 1
 		if direction < 0: direction = -1
 		if direction:
+			progress_bar.value+=1
 			_animated_sprite.play("walk")
 			velocity.x = direction * SPEED
 			_animated_sprite.scale.x = direction * -10
