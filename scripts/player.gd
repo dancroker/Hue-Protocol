@@ -62,6 +62,8 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if !Input.is_action_pressed("ui_accept"):
 		var direction := Input.get_axis("ui_left", "ui_right")
+		if direction > 0: direction = 1
+		if direction < 0: direction = -1
 		if direction:
 			_animated_sprite.play("walk")
 			velocity.x = direction * SPEED
