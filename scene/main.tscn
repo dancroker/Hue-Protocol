@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cmw71gaexrg7j" path="res://scripts/crt_effect.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://cdwfk60nx3fqi" path="res://scene/TileMapSwitch.tscn" id="3_brvut"]
 [ext_resource type="FontFile" uid="uid://0mr41am446jr" path="res://2d art/Jersey_10/Jersey10-Regular.ttf" id="6_4j5ol"]
+[ext_resource type="Texture2D" uid="uid://b31p33ojh24q1" path="res://2d art/staircase1.png" id="7_p1hux"]
+[ext_resource type="Texture2D" uid="uid://dv8vlxpe3gopg" path="res://2d art/clock1.png" id="8_of57s"]
 
 [sub_resource type="Shader" id="Shader_v0l8b"]
 code = "/*
@@ -274,7 +276,7 @@ font_size = 50
 script = ExtResource("1_0ha60")
 
 [node name="CharacterBody2D" parent="." unique_id=579170887 instance=ExtResource("2_v0l8b")]
-position = Vector2(944, -596)
+position = Vector2(498, -5654)
 scale = Vector2(0.25, 0.25)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1000464645]
@@ -282,8 +284,6 @@ offset = Vector2(-65.34, 0)
 limit_left = 676
 limit_right = 576
 script = ExtResource("1_brvut")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1639504051]
 
 [node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("3_brvut")]
 
@@ -311,3 +311,11 @@ offset_top = 11.0
 offset_right = 1144.0
 offset_bottom = 34.0
 label_settings = SubResource("LabelSettings_4j5ol")
+
+[node name="Stairs" type="Sprite2D" parent="CanvasLayer" unique_id=996104028]
+position = Vector2(481, 39)
+texture = ExtResource("7_p1hux")
+
+[node name="Clock" type="Sprite2D" parent="CanvasLayer" unique_id=385298601]
+position = Vector2(921, 39)
+texture = ExtResource("8_of57s")

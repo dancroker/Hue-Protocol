@@ -3,10 +3,15 @@ extends CharacterBody2D
 const SPEED = 175.0
 const JUMP_VELOCITY = -600.0
 var MAX_NUM_JUMP = 1
-var jump_vairable = -100
+var jump_vairable = -200
 var MASK_EQUIPT = 0;
 var player_completion = 0;
 var player_y = 0;
+var jump_calc = 0;
+var jump_precentage = 0
+var text
+
+@onready var label: Label = $Label
 
 
 func _physics_process(delta: float) -> void:
@@ -42,6 +47,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = 0
 	player_completion_percentage()
+	var text = player_jump_precentage()
+	text = text.replace(".0","")
+	text = text+"%"
+	label.text = text
 	
 
 
@@ -67,5 +76,12 @@ func player_completion_percentage():
 		player_completion = 100
 	return str(player_completion)
 
+func player_jump_precentage():
+	jump_calc = jump_vairable + 200
+	if jump_calc < 0:
+		jump_calc = jump_calc*-1
+	jump_precentage = (float(jump_calc)/400)*100
+	return str(jump_precentage)
+	
 
 	
