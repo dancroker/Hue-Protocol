@@ -14,6 +14,7 @@ var text
 @onready var label: Label = $Label
 
 
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():

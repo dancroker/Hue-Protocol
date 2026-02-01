@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckh42mep3jrc2"
+path="res://.godot/imported/mask_song_2 1.wav-6b186430d2f0428e953c5a0b4d8d9aa2.sample"
+
+[deps]
+
+source_file="res://2d art/mask_song_2 1.wav"
+dest_files=["res://.godot/imported/mask_song_2 1.wav-6b186430d2f0428e953c5a0b4d8d9aa2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

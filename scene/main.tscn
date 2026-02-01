@@ -8,6 +8,8 @@
 [ext_resource type="FontFile" uid="uid://0mr41am446jr" path="res://2d art/Jersey_10/Jersey10-Regular.ttf" id="6_4j5ol"]
 [ext_resource type="Texture2D" uid="uid://b31p33ojh24q1" path="res://2d art/staircase1.png" id="7_p1hux"]
 [ext_resource type="Texture2D" uid="uid://dv8vlxpe3gopg" path="res://2d art/clock1.png" id="8_of57s"]
+[ext_resource type="Shader" uid="uid://s5gkna4v58qy" path="res://shaders/red_tone_shader.gdshader" id="9_tqoya"]
+[ext_resource type="AudioStream" uid="uid://b88kkqtxm1fo" path="res://scene/mask_song_2 1.wav" id="10_k65ib"]
 
 [sub_resource type="Shader" id="Shader_v0l8b"]
 code = "/*
@@ -243,7 +245,7 @@ void fragment()
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wp4xf"]
 shader = SubResource("Shader_v0l8b")
 shader_parameter/overlay = true
-shader_parameter/scanlines_opacity = 0.12400000589
+shader_parameter/scanlines_opacity = 0.4
 shader_parameter/scanlines_width = 0.2210000104975
 shader_parameter/grille_opacity = 0.0
 shader_parameter/resolution = Vector2(640, 480)
@@ -271,6 +273,29 @@ font_size = 50
 [sub_resource type="LabelSettings" id="LabelSettings_4j5ol"]
 font = ExtResource("6_4j5ol")
 font_size = 50
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wscrc"]
+shader = ExtResource("9_tqoya")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 1.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [node name="Main" type="Node2D" unique_id=323402972]
 script = ExtResource("1_0ha60")
@@ -321,3 +346,29 @@ texture = ExtResource("7_p1hux")
 [node name="Clock" type="Sprite2D" parent="CanvasLayer" unique_id=385298601]
 position = Vector2(921, 39)
 texture = ExtResource("8_of57s")
+
+[node name="Red" type="ColorRect" parent="CanvasLayer" unique_id=864856307]
+visible = false
+material = SubResource("ShaderMaterial_wscrc")
+offset_left = -65.0
+offset_top = -1.0
+offset_right = 1158.0
+offset_bottom = 656.0
+
+[node name="Control" type="Control" parent="." unique_id=2137611745]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1703016371]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 472.0
+offset_right = 330.0
+offset_bottom = 598.0
+bbcode_enabled = true
+text = "[wave amp=25.0 freq=5.0 connected=1]{Press SHIFT OR W TO SWITCH MASKS}[/wave]"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=276101369]
+stream = ExtResource("10_k65ib")
