@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -600.0
 var MAX_NUM_JUMP = 1
 var jump_vairable = -100
 var MASK_EQUIPT = 0;
+var player_completion = 0;
+var player_y = 0;
 
 
 func _physics_process(delta: float) -> void:
@@ -39,6 +41,8 @@ func _physics_process(delta: float) -> void:
 		screen_wrap()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	player_completion_percentage()
 	
 
 
@@ -53,6 +57,14 @@ func screen_wrap():
 	elif position.x < 0:
 		position.x = screen_size.x
 
+func player_completion_percentage():
+	player_y = position.y - 594
+	if player_y < 0:
+		player_y = player_y*-1
+	player_completion = ((player_y/ (160*32)))*100
+	if player_completion > 100:
+		player_completion = 100
+	print(player_completion)
 
 
 	
