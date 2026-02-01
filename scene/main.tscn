@@ -288,7 +288,6 @@ script = ExtResource("1_brvut")
 [node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("3_brvut")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2019587054]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=443587593 node_paths=PackedStringArray("label_2")]
 material = SubResource("ShaderMaterial_wp4xf")
