@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csm8n76jaarnb"]
 
-[ext_resource type="Script" uid="uid://cpdl11xmmf2tn" path="res://scripts/Precentage.gd" id="1_0ha60"]
+[ext_resource type="Script" path="res://scripts/Precentage.gd" id="1_0ha60"]
 [ext_resource type="Script" uid="uid://bghuinlyik5m" path="res://scripts/camera_2d.gd" id="1_brvut"]
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Script" uid="uid://cmw71gaexrg7j" path="res://scripts/crt_effect.gd" id="2_wp4xf"]
@@ -284,8 +284,6 @@ offset = Vector2(-65.34, 0)
 limit_left = 676
 limit_right = 576
 script = ExtResource("1_brvut")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1639504051]
 
 [node name="TileMpaSwitchNode" parent="." unique_id=460489873 instance=ExtResource("3_brvut")]
 
