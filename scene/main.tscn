@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://0mr41am446jr" path="res://2d art/Jersey_10/Jersey10-Regular.ttf" id="6_4j5ol"]
 [ext_resource type="Texture2D" uid="uid://b31p33ojh24q1" path="res://2d art/staircase1.png" id="7_p1hux"]
 [ext_resource type="Texture2D" uid="uid://dv8vlxpe3gopg" path="res://2d art/clock1.png" id="8_of57s"]
-[ext_resource type="Shader" path="res://shaders/red_tone_shader.gdshader" id="9_tqoya"]
+[ext_resource type="Shader" uid="uid://s5gkna4v58qy" path="res://shaders/red_tone_shader.gdshader" id="9_tqoya"]
 [ext_resource type="AudioStream" uid="uid://b88kkqtxm1fo" path="res://scene/mask_song_2 1.wav" id="10_k65ib"]
 
 [sub_resource type="Shader" id="Shader_v0l8b"]
@@ -301,7 +301,7 @@ shader_parameter/vignette_opacity = 0.5
 script = ExtResource("1_0ha60")
 
 [node name="CharacterBody2D" parent="." unique_id=579170887 instance=ExtResource("2_v0l8b")]
-position = Vector2(34, 577)
+position = Vector2(301, -5657)
 scale = Vector2(0.25, 0.25)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1000464645]
@@ -315,6 +315,7 @@ script = ExtResource("1_brvut")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2019587054]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=443587593 node_paths=PackedStringArray("label_2")]
+visible = false
 material = SubResource("ShaderMaterial_wp4xf")
 offset_left = -56.0
 offset_top = -71.0
@@ -364,9 +365,44 @@ layout_mode = 0
 offset_left = 2.0
 offset_top = 472.0
 offset_right = 330.0
-offset_bottom = 598.0
+offset_bottom = 511.0
 bbcode_enabled = true
-text = "[wave amp=25.0 freq=5.0 connected=1]{Press SHIFT OR W TO SWITCH MASKS}[/wave]"
+text = "[wave amp=25.0 freq=5.0 connected=1]Press TAB OR W TO SWITCH MASKS[/wave]"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="Control" unique_id=1952362514]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 530.0
+offset_right = 331.0
+offset_bottom = 569.0
+bbcode_enabled = true
+text = "[wave amp=25.0 freq=5.0 connected=1]Controller Support[/wave]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control" unique_id=501472912]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 498.0
+offset_right = 332.0
+offset_bottom = 537.0
+bbcode_enabled = true
+text = "[wave amp=25.0 freq=5.0 connected=1]WASD OR ARROW KEYS[/wave]"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Control" unique_id=1259194246]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 430.0
+offset_right = 326.0
+offset_bottom = 469.0
+bbcode_enabled = true
+text = "[wave amp=25.0 freq=5.0 connected=1]Release SPACE to jump[/wave]"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Control" unique_id=717102164]
+layout_mode = 0
+offset_top = 400.0
+offset_right = 328.0
+offset_bottom = 439.0
+bbcode_enabled = true
+text = "[wave amp=25.0 freq=5.0 connected=1]Hold SPACE to charge jump[/wave]"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control" unique_id=1030461843]
 layout_mode = 0

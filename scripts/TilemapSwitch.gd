@@ -8,7 +8,7 @@ extends Node2D
 
 @onready var red: ColorRect = $"../CanvasLayer/Red"
 
-var s = false
+var s = true
 var MASK_EQUIPT = 0;
 # C$Node/Layer0alled when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,9 +27,10 @@ func _process(delta: float) -> void:
 func SwitchTile():
 	if Input.is_action_just_pressed("Mask Red"):
 		s=!s
+		
 		AudioServer.set_bus_bypass_effects(0,s)
 		var tween: Tween = create_tween().set_ease(Tween.EASE_IN_OUT)
-		if s:
+		if s==true:
 			tween.tween_property(color_rect.material,"shader_parameter/distort_intensity", 1.0,0.5).set_ease(Tween.EASE_OUT)
 		else:
 			tween.tween_property(color_rect.material,"shader_parameter/distort_intensity", 0.0,0.5).set_ease(Tween.EASE_IN)

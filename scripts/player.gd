@@ -21,6 +21,8 @@ var jump_charge_sfx_played = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
+	print(position.x)
+	print("Position Y; ",position.y)
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if is_on_floor():
@@ -55,9 +57,12 @@ func _physics_process(delta: float) -> void:
 
 		
 		
-
 		
 	
+		
+	if Input.is_action_just_pressed("Restart") and position.y <= ((160*32))*-1:
+		position.x = 34
+		position.y = 592
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if !Input.is_action_pressed("ui_accept"):
@@ -72,6 +77,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			_animated_sprite.play("charging")
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+			
 	else:
 		velocity.x = 0
 		_animated_sprite.play("idol")
