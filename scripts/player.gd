@@ -9,8 +9,9 @@ var player_completion = 0;
 var player_y = 0;
 var jump_calc = 0;
 var jump_precentage = 0
+var text
 
-@export var label: Label
+@onready var label: Label = $Label
 
 
 func _physics_process(delta: float) -> void:

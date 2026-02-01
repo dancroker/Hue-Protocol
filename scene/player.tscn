@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://pmloiujqkva3" path="res://scripts/player.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://bm50oln00vci2" path="res://2d art/Player.png" id="2_hjaqi"]
+[ext_resource type="FontFile" uid="uid://0mr41am446jr" path="res://2d art/Jersey_10/Jersey10-Regular.ttf" id="3_fvtld"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hjaqi"]
 radius = 66.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ct4mp"]
+font = ExtResource("3_fvtld")
+font_size = 100
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=579170887]
 script = ExtResource("1_hjaqi")
@@ -15,3 +20,10 @@ texture = ExtResource("2_hjaqi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=196586527]
 shape = SubResource("CircleShape2D_hjaqi")
+
+[node name="Label" type="Label" parent="." unique_id=1881168295]
+offset_left = -149.0
+offset_top = -185.0
+offset_right = 161.0
+offset_bottom = -71.0
+label_settings = SubResource("LabelSettings_ct4mp")
