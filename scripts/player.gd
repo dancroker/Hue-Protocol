@@ -12,62 +12,59 @@ var jump_precentage = 0
 var text
 
 @onready var label: Label = $Label
-@onready var jump_sfx: AudioStreamPlayer = $JumpSfx
-@onready var jump_charge_sfx: AudioStreamPlayer = $JumpChargeSfx
-var jump_charge_sfx_played = false
-
+@onready var _animated_sprite = $AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
-	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if is_on_floor():
+		
 		MAX_NUM_JUMP=1
 	# Handle jump.
 	if Input.is_action_pressed("ui_accept") and MAX_NUM_JUMP > 0:
 		if jump_vairable > -600:
 			jump_vairable -= 10
-		
-		if not jump_charge_sfx.playing and not jump_charge_sfx_played:
-			jump_charge_sfx.play()
-			jump_charge_sfx_played = true
-		
+			#_animated_sprite.play("charging")
 	if Input.is_action_just_released("ui_accept") and is_on_floor():
 		MAX_NUM_JUMP -=1
 		velocity.y = jump_vairable
 		jump_vairable = -200
-		
-		jump_sfx.pitch_scale = randf_range(0.9,1.1)
-		jump_sfx.play()
-		jump_charge_sfx_played = false
-		jump_charge_sfx.stop()
-		
+		_animated_sprite.play("jump")
 		#velocity.y = JUMP_VELOCITY
 		
 	#if is_on_wall() and Input.is_action_just_pressed("ui_accept") and MAX_NUM_JUMP > 0:
 		#MAX_NUM_JUMP -= 1
 		#velocity.y = JUMP_VELOCITY
-	
+	#run anim
+
+		
+		
+
+		
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if !Input.is_action_pressed("ui_accept"):
 		var direction := Input.get_axis("ui_left", "ui_right")
 		if direction:
+			_animated_sprite.play("walk")
 			velocity.x = direction * SPEED
+			_animated_sprite.scale.x = direction * -10
 			screen_wrap()
 		else:
+			_animated_sprite.play("charging")
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	else:
 		velocity.x = 0
+		_animated_sprite.play("idol")
 	player_completion_percentage()
 	var text = player_jump_precentage()
 	text = text.replace(".0","")
 	text = text+"%"
 	label.text = text
-	
+		
 
 
 
