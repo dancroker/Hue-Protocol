@@ -1,0 +1,21 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://p1ywj5lm8o7g"]
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
+resource_name = "EQ"
+band_db/32_hz = -50.0
+band_db/100_hz = -40.0
+band_db/1000_hz = -30.0
+band_db/3200_hz = -60.0
+band_db/10000_hz = -60.0
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_j3pel"]
+resource_name = "Distortion"
+mode = 2
+pre_gain = 5.78
+drive = 0.13
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectEQ_j3pel")
+bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectDistortion_j3pel")
+bus/0/effect/1/enabled = true
