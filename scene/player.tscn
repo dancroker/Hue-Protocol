@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://0poc6m3t8m5c" path="res://2d art/playerwalk.png" id="3_ct4mp"]
 [ext_resource type="FontFile" uid="uid://0mr41am446jr" path="res://2d art/Jersey_10/Jersey10-Regular.ttf" id="3_fvtld"]
 [ext_resource type="Texture2D" uid="uid://bhcbyd7mspho3" path="res://2d art/playerJump.png" id="3_s4jxa"]
+[ext_resource type="AudioStream" uid="uid://iilmghyldtlg" path="res://sound/jump.wav" id="4_s4jxa"]
+[ext_resource type="AudioStream" uid="uid://cxer6g4qankgh" path="res://sound/sci-fi-charge-up-37395.mp3" id="5_oh5ij"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hjaqi"]
 radius = 66.0
@@ -193,3 +195,11 @@ label_settings = SubResource("LabelSettings_ct4mp")
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_34jf3")
 animation = &"walk"
+
+[node name="JumpSfx" type="AudioStreamPlayer" parent="." unique_id=1264443164]
+stream = ExtResource("4_s4jxa")
+volume_db = -5.0
+
+[node name="JumpChargeSfx" type="AudioStreamPlayer" parent="." unique_id=1973708804]
+stream = ExtResource("5_oh5ij")
+volume_db = 5.0

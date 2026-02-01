@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qcmiggk6ryw"
-path="res://.godot/imported/equipEFFECT.png-cea918cd0f9e0063a1cfc782183fc83b.ctex"
+uid="uid://b6kc8yj4s4bxi"
+path="res://.godot/imported/maskicon.png-b4d5a9bfcd3cfe236c2bd245a5cf5607.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2d art/equipEFFECT.png"
-dest_files=["res://.godot/imported/equipEFFECT.png-cea918cd0f9e0063a1cfc782183fc83b.ctex"]
+source_file="res://2d art/maskicon.png"
+dest_files=["res://.godot/imported/maskicon.png-b4d5a9bfcd3cfe236c2bd245a5cf5607.ctex"]
 
 [params]
 

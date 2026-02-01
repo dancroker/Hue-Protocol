@@ -4,12 +4,13 @@ extends Node2D
 @onready var ground_blue: TileMapLayer = $"Ground Blue"
 @onready var ground: TileMapLayer = $"Ground Red"
 @onready var color_rect: ColorRect = $"../CanvasLayer/ColorRect"
-@onready var audio_stream_player: AudioStreamPlayer = $"../AudioStreamPlayer"
+@onready var music: AudioStreamPlayer = $"../Music"
+
 var s = false
 var MASK_EQUIPT = 0;
 # C$Node/Layer0alled when the node enters the scene tree for the first time.
 func _ready() -> void:
-	audio_stream_player.play()
+	music.play()
 	ground.visible=!ground.visible
 	ground.collision_enabled = !ground_blue.collision_enabled
 	pass # Replace with function body.
@@ -17,6 +18,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	#var direction := Input.is_action_pressed("Switch Mask")
+	if not music.playing: music.play()
 	SwitchTile()
 	pass
 	

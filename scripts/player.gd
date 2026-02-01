@@ -12,10 +12,14 @@ var jump_precentage = 0
 var text
 
 @onready var label: Label = $Label
+@onready var jump_sfx: AudioStreamPlayer = $JumpSfx
+@onready var jump_charge_sfx: AudioStreamPlayer = $JumpChargeSfx
+var jump_charge_sfx_played = false
 
 
 
 func _physics_process(delta: float) -> void:
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -25,10 +29,21 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_accept") and MAX_NUM_JUMP > 0:
 		if jump_vairable > -600:
 			jump_vairable -= 10
+		
+		if not jump_charge_sfx.playing and not jump_charge_sfx_played:
+			jump_charge_sfx.play()
+			jump_charge_sfx_played = true
+		
 	if Input.is_action_just_released("ui_accept") and is_on_floor():
 		MAX_NUM_JUMP -=1
 		velocity.y = jump_vairable
 		jump_vairable = -200
+		
+		jump_sfx.pitch_scale = randf_range(0.9,1.1)
+		jump_sfx.play()
+		jump_charge_sfx_played = false
+		jump_charge_sfx.stop()
+		
 		#velocity.y = JUMP_VELOCITY
 		
 	#if is_on_wall() and Input.is_action_just_pressed("ui_accept") and MAX_NUM_JUMP > 0:

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csm8n76jaarnb"]
 
-[ext_resource type="Script" path="res://scripts/Precentage.gd" id="1_0ha60"]
+[ext_resource type="Script" uid="uid://cpdl11xmmf2tn" path="res://scripts/Precentage.gd" id="1_0ha60"]
 [ext_resource type="Script" uid="uid://bghuinlyik5m" path="res://scripts/camera_2d.gd" id="1_brvut"]
 [ext_resource type="PackedScene" uid="uid://cry5o4oueev2e" path="res://scene/player.tscn" id="2_v0l8b"]
 [ext_resource type="Script" uid="uid://cmw71gaexrg7j" path="res://scripts/crt_effect.gd" id="2_wp4xf"]
@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://0mr41am446jr" path="res://2d art/Jersey_10/Jersey10-Regular.ttf" id="6_4j5ol"]
 [ext_resource type="Texture2D" uid="uid://b31p33ojh24q1" path="res://2d art/staircase1.png" id="7_p1hux"]
 [ext_resource type="Texture2D" uid="uid://dv8vlxpe3gopg" path="res://2d art/clock1.png" id="8_of57s"]
-[ext_resource type="Shader" uid="uid://s5gkna4v58qy" path="res://shaders/red_tone_shader.gdshader" id="9_tqoya"]
+[ext_resource type="Shader" path="res://shaders/red_tone_shader.gdshader" id="9_tqoya"]
 [ext_resource type="AudioStream" uid="uid://b88kkqtxm1fo" path="res://scene/mask_song_2 1.wav" id="10_k65ib"]
 
 [sub_resource type="Shader" id="Shader_v0l8b"]
@@ -368,5 +368,5 @@ offset_bottom = 598.0
 bbcode_enabled = true
 text = "[wave amp=25.0 freq=5.0 connected=1]{Press SHIFT OR W TO SWITCH MASKS}[/wave]"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=276101369]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=276101369]
 stream = ExtResource("10_k65ib")
