@@ -12,3 +12,8 @@ Your job applicant:
 Traverse a constructed scenario to put this technology to the test.
 
 Time is already ticking applicant, climb to the top!
+
+<img width="800" height="445" alt="image" src="https://github.com/user-attachments/assets/9c7901d9-eab3-4219-89e1-7fd87ea71d29" />
+
+<img width="800" height="463" alt="image" src="https://github.com/user-attachments/assets/2e18f545-aed2-4c5a-a88c-2a75c2c5d502" />
+
