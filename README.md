@@ -2,7 +2,7 @@
 
 Welcome, successful applicant!
 We at Hue Protocol are proud to have applicants as excited to join our family as you!
-Welcome to the prototyping stage of out latest invention!
+Welcome to the prototyping stage of our latest invention!
 
 - MASK-RB -
 
