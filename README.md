@@ -1,3 +1,5 @@
+<img width="335" height="188" alt="Hue Protocol screen" src="https://github.com/user-attachments/assets/8f9bb878-a789-4c51-a8bc-f5d72a9431d8" />
+
 Welcome, successful applicant!
 We at Hue Protocol are proud to have applicants as excited to join our family as you!
 Welcome to the prototyping stage of out latest invention!
